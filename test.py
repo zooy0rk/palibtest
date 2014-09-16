@@ -1,12 +1,13 @@
 #!/usr/bin/python
 
-import palib
+from pulseaudio.lib_pulseaudio import *
+#import pamixer.PulseAudio
+from pamixer.PulseAudio import PulseAudio
+from pamixer.ParCur import ParCur
 
-pulse = palib.PulseObj('Test', None, False)
+#pa = pamixer.PulseAudio(server='music.zooy0rk.net')
+#pa = PulseAudio()
 
-clients = pulse.pulse_client_list()
+pc = ParCur()
 
-for client in clients:
-    print client
 
-print 'test'
